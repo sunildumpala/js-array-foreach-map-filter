@@ -7,7 +7,12 @@ Examples:
 
 */
 function doubleValues(arr){
-    
+    let newArray = [];
+    arr.forEach(element => {
+        newArray.push(element*2);
+    });
+  //  console.log(newArray);
+    return newArray;
 }
 
 /*
@@ -19,7 +24,13 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+    let newArray = [];
+    arr.forEach(element => {
+        if (element%2 == 0){
+            newArray.push(element);
+        }
+    });
+    return newArray;
 }
 
 /*
@@ -31,7 +42,11 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    let newArray = [];
+    arr.forEach(element => {
+        newArray.push(element[0]+element[element.length-1]);
+    });
+    return newArray;
 }
 
 /*
@@ -44,7 +59,12 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    let newArray = [];
+    arr.forEach(element => {
+        element[key] = value;        
+        newArray.push(element);
+    });
+    return newArray;
 }
 
 /*
@@ -58,7 +78,54 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+   let newArray = [];
+   countA = 0;
+   countE = 0;
+   countI = 0;
+   countO = 0;
+   countU = 0;
+   let newObj = {};
+   str.split("").forEach(element => {
+    //console.log(element);
+    if (element == 'a' || element == 'A'){
+        countA++;
+    }
+    if (element == 'e' || element == 'E'){
+        countE++;
+    }
+    if (element == 'i' || element == 'I'){
+        countI++;
+    }
+    if (element == 'o' || element == 'O'){
+        countO++;
+    }
+    if (element == 'u' || element == 'U'){
+        countU++;
+    }
+
+   });
+   if (countA > 0){
+    //newArray.push({'a':countA});
+    newObj.a = countA;
+   }
+   if (countE > 0){
+    //newArray.push({'e':countE});
+    newObj.e = countE;
+   }
+   if (countI > 0){
+    //newArray.push({'i':countI});
+    newObj.i = countI;
+   }
+   if (countO > 0){
+    //newArray.push({'o':countO});
+    newObj.o = countO;
+   }
+   if (countU > 0){
+    //newArray.push({'u':countU});
+    newObj.u = countU;
+   }
+
+   return newObj;
 }
 
 /*
