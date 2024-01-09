@@ -136,7 +136,12 @@ Examples:
     doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
 */
 
-function doubleValuesWithMap(arr) {}
+function doubleValuesWithMap(arr) {
+    const retArray = arr.map(function(num){       
+        return num*2;
+    });    
+    return retArray;
+}
 
 /*
 Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
@@ -147,7 +152,10 @@ Examples:
 */
 
 function valTimesIndex(arr){
-    
+    const retArray = arr.map(function(num, index){       
+        return num*index;
+    });    
+    return retArray;   
 }
 
 /*
@@ -158,7 +166,10 @@ Examples:
 */
 
 function extractKey(arr, key){
-    
+    const retArray = arr.map(function(obj){       
+        return obj[key];
+    });    
+    return retArray;  
 }
 
 /*
@@ -169,7 +180,10 @@ Examples:
 */
 
 function extractFullName(arr){
-    
+    const retArray = arr.map(function(obj){       
+        return obj.first +" "+ obj.last;
+    });    
+    return retArray;
 }
 
 /*
